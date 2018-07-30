@@ -2,24 +2,28 @@
 #include "concrete_product.h"
 #include "abstract_product.h"
 
-Car *AFactory::create_car()
+std::shared_ptr<Car> AFactory::create_car()
 {
-	return new ACar();
+	auto a_car = std::make_shared<ACar>();
+	return a_car;
 }
 
-Bike *AFactory::create_bike()
+std::shared_ptr<Bike> AFactory::create_bike()
 {
-	return new ABike();
+	auto a_bike = std::make_shared<ABike>();
+	return a_bike;
 }
 
-Car *BFactory::create_car()
+std::shared_ptr<Car> BFactory::create_car()
 {
-	return new BCar();
+	auto b_car = std::make_shared<BCar>();
+	return b_car;
 }
 
-Bike *BFactory::create_bike()
+std::shared_ptr<Bike> BFactory::create_bike()
 {
-	return new BBike();
+	auto b_bike = std::make_shared<BBike>();
+	return b_bike;
 }
 
 

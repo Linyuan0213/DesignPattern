@@ -1,15 +1,24 @@
+#include <memory>
+
 #include "concrete_factory.h"
 #include "abstract_factory.h"
 
 
-AbstractFactory *AbstractFactory::create_factory(FactoryType factory)
+std::shared_ptr<AbstractFactory> AbstractFactory::create_factory(FactoryType factory)
 {
 	switch (factory)
 	{
 		case FactoryType::A_Factory:
-			return new AFactory();
+		{
+			auto a_facotory = std::make_shared<AFactory>();
+			return a_facotory;
+		}
+
 		case FactoryType::B_Factory:
-			return new BFactory();
+		{
+			auto b_factory = std::make_shared<BFactory>();
+			return b_factory;
+		}
 
 		default:
 			return nullptr;

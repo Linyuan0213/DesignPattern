@@ -1,5 +1,6 @@
 #ifndef __ABSTRACT_FACTORY_H
 #define __ABSTRACT_FACTORY_H
+#include <memory>
 
 #include "abstract_product.h"
 
@@ -12,10 +13,10 @@ public:
 		B_Factory 
 	};
 
-	virtual Car * create_car() = 0;
-	virtual Bike * create_bike() = 0;
+	virtual std::shared_ptr<Car> create_car() = 0;
+	virtual std::shared_ptr<Bike> create_bike() = 0;
 
-	static AbstractFactory *create_factory(FactoryType factory);
+	static std::shared_ptr<AbstractFactory> create_factory(FactoryType factory);
 };
 
 #endif 
