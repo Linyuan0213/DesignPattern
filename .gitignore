@@ -33,4 +33,6 @@
 *.exe
 *.out
 *.app
-./AbstractFactory/bin/*
+
+#dir
+bin
