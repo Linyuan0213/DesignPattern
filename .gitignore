@@ -20,6 +20,9 @@
 *.mod
 *.smod
 
+# Ctag
+*.tags
+
 # Compiled Static libraries
 *.lai
 *.la
