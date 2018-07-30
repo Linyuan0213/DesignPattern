@@ -12,8 +12,8 @@ public:
 		B_Factory 
 	};
 
-	virtual Car * create_car();
-	virtual Bike * create_bike();
+	virtual Car * create_car() = 0;
+	virtual Bike * create_bike() = 0;
 
 	static AbstractFactory *create_factory(FactoryType factory);
 };

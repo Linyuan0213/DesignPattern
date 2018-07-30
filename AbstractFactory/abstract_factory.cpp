@@ -1,6 +1,7 @@
 #include "concrete_factory.h"
 #include "abstract_factory.h"
 
+
 AbstractFactory *AbstractFactory::create_factory(FactoryType factory)
 {
 	switch (factory)
@@ -11,7 +12,6 @@ AbstractFactory *AbstractFactory::create_factory(FactoryType factory)
 			return new BFactory();
 
 		default:
-			break;
-	
+			return nullptr;
 	}
 }

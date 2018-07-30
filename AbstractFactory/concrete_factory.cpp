@@ -1,5 +1,6 @@
 #include "concrete_factory.h"
 #include "concrete_product.h"
+#include "abstract_product.h"
 
 Car *AFactory::create_car()
 {

@@ -7,8 +7,8 @@
 class AFactory : public AbstractFactory 
 {
 public:
-	Car	 *create_car()	override;
-	Bike *create_bike() override;
+	virtual Car	 *create_car()	override;
+	virtual Bike *create_bike() override;
 
 };
 
@@ -16,8 +16,8 @@ class BFactory : public AbstractFactory
 {
 
 public:
-	Car	 *create_car()	override;
-	Bike *create_bike() override;
+	virtual Car	 *create_car()	override;
+	virtual Bike *create_bike() override;
 };
 
 #endif

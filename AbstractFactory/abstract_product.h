@@ -7,14 +7,14 @@
 class Car
 {
 public:
-	virtual std::string name();
+	virtual std::string name() = 0;
 };
 
 //自行车借口
 class Bike
 {
 public:
-	virtual std::string name();
+	virtual std::string name() = 0;
 
 };
 
