@@ -8,7 +8,7 @@ class ConcretePrototype : public Prototype
 {
 public:
 	ConcretePrototype(int num);
-
+	//拷贝构造
 	ConcretePrototype(const ConcretePrototype & rhs);
 
 	//克隆对象本身
