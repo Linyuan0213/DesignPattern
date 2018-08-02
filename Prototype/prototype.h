@@ -3,6 +3,7 @@
 
 #include <memory>
 
+//抽象原型
 class Prototype
 {
 public:
